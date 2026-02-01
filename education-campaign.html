@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Udimking Education Foundation - Case Study</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Georgia', serif;
+            line-height: 1.8;
+            color: #2c3e50;
+            background: #ffffff;
+        }
+
+        /* Navigation */
+        .nav {
+            background: #2C1810;
+            padding: 25px 60px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-brand {
+            font-size: 1.4em;
+            font-weight: bold;
+            color: #D4A574;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 35px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: #E8D5C4;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #D4A574;
+        }
+
+        /* Hero */
+        .hero {
+            background: linear-gradient(135deg,  #2C1810,  #6c4333 100%);
+            color: white;
+            padding: 100px 60px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3.5em;
+            margin-bottom: 20px;
+            font-weight: 300;
+        }
+
+        .hero .client-name {
+            font-size: 1.3em;
+            opacity: 0.9;
+            margin-bottom: 30px;
+        }
+
+        .hero .tags {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .tag {
+            background: rgba(255,255,255,0.2);
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-size: 0.95em;
+        }
+
+        /* Content */
+        .section {
+            max-width: 900px;
+            margin: 80px auto;
+            padding: 0 60px;
+        }
+
+        .section h2 {
+            font-size: 2.5em;
+            color: #2C1810;
+            margin-bottom: 30px;
+            font-weight: 300;
+        }
+
+        .section p {
+            font-size: 1.2em;
+            color: #555;
+            margin-bottom: 25px;
+        }
+
+        /* Work Sample Embed */
+        .work-sample {
+            background: #FFF8F0;
+            padding: 60px;
+            border-radius: 8px;
+            margin: 60px 0;
+            border-left: 5px solid #16A34A;
+        }
+
+        .work-sample h3 {
+            font-size: 2em;
+            color: #16A34A;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .sample-content {
+            background: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+        }
+
+        .sample-content h4 {
+            font-size: 1.6em;
+            color: #2C1810;
+            margin-bottom: 20px;
+        }
+
+        .sample-content p {
+            font-size: 1.1em;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+        .quote-box {
+            background: #FEF3C7;
+            padding: 30px;
+            border-left: 4px solid #FBBF24;
+            margin: 30px 0;
+            font-style: italic;
+            font-size: 1.2em;
+        }
+
+        /* Results */
+        .results-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin: 60px 0;
+        }
+
+        .result-card {
+            background: #563528;
+            color: white;
+            padding: 40px 30px;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .result-number {
+            font-size: 3em;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .result-label {
+            font-size: 1.1em;
+            opacity: 0.95;
+        }
+
+        /* Footer */
+        .footer {
+            background: #2C1810;
+            color: #E8D5C4;
+            padding: 60px;
+            text-align: center;
+            margin-top: 100px;
+        }
+
+        .footer-nav {
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+            margin-bottom: 30px;
+        }
+
+        .footer-nav a {
+            color: #E8D5C4;
+            text-decoration: none;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5em;
+            }
+
+            .results-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .section, .work-sample {
+                padding: 0 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="nav">
+        <div class="nav-brand">PORTFOLIO</div>
+        <ul class="nav-links">
+            <li><a href="Home.html">Home</a></li>
+            <li><a href="About.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="work.html">Work</a></li>
+            <li><a href="Contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="hero">
+        <h1>The Honest Path to Success</h1>
+        <p class="client-name">Udimking Education Foundation</p>
+        <div class="tags">
+            <span class="tag">Psychology-Driven Copy</span>
+            <span class="tag">Social Impact</span>
+            <span class="tag">Educational Content</span>
+        </div>
+    </div>
+
+    <section class="section">
+        <h2>The Challenge</h2>
+        <p>Udimking Education Foundation needed to reach Nigerian students tempted by examination malpractice—not with lectures or shame, but with psychology-backed strategies that address the root cause: fear of failure.</p>
+        <p>The brief: Create content that helps students choose honest preparation over cheating, using cognitive science and emotional intelligence.</p>
+    </section>
+
+    <section class="section">
+        <h2>My Approach</h2>
+        <p>I conducted deep research into student psychology, analyzing why students cheat despite knowing the risks. The insight: it's not about laziness or lack of morals—it's about fear, pressure, and believing failure is permanent.</p>
+        <p>I built a campaign around three psychological principles:</p>
+        <p><strong>1. Reframe failure</strong> as feedback, not identity</p>
+        <p><strong>2. Address the social pressure</strong> that makes cheating feel necessary</p>
+        <p><strong>3. Provide actionable learning strategies</strong> so students have an alternative path to success</p>
+    </section>
+
+    <!-- Actual Work Sample -->
+    <div class="work-sample">
+        <h3>Sample: Campaign Copy Excerpt</h3>
+        <div class="sample-content">
+            <h4>The Choice</h4>
+            <p>You've felt it. That moment in the exam hall when someone whispers they have the answers. That classmate who always scores high but never studies. That teacher who hints there are "easier ways."</p>
+            <p>The pressure builds. Everyone's doing it. Why should you be the one left behind?</p>
+            <div class="quote-box">
+                Here's the truth nobody tells you: <strong>The shortcut doesn't lead where you think it does.</strong>
+            </div>
+            <p>This isn't a lecture about being good. This is about understanding what actually works—and what destroys you slowly, so you don't notice until it's too late.</p>
+
+            <h4 style="margin-top: 40px;">What Cheating Actually Costs</h4>
+            <p><strong>You Miss the Learning (The Quack Factor):</strong> That certificate you get by cheating? It's a lie printed on paper. Engineers who cheated can't build bridges. Doctors who bought answers can't save lives.</p>
+            <p><strong>You Destroy Your Self-Trust:</strong> When you cheat, you send yourself a message: "My effort isn't good enough. I'm not capable." That belief burrows deep. You become an imposter in your own life.</p>
+            <p><strong>You Feed National Corruption:</strong> Every time a student cheats, they practice the skills that turn countries into failed states. Your integrity is an act of patriotism.</p>
+        </div>
+    </div>
+
+    <section class="section">
+        <h2>The Results</h2>
+        <div class="results-grid">
+            <div class="result-card">
+                <div class="result-number">3</div>
+                <div class="result-label">Campaign Deliverables</div>
+            </div>
+            <div class="result-card">
+                <div class="result-number">100%</div>
+                <div class="result-label">Psychology-Backed Strategies</div>
+            </div>
+            <div class="result-card">
+                <div class="result-number">5,000+</div>
+                <div class="result-label">Students Reached</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>What Made This Work</h2>
+        <p><strong>No Shame, Just Science:</strong> I didn't lecture students about morality. I explained the neuroscience of why cramming doesn't work and provided 4-step mastery techniques that actually do.</p>
+        <p><strong>Addressed Real Fear:</strong> Students cheat because they're terrified of failure. I reframed failure as feedback, not identity—making honest effort feel possible again.</p>
+        <p><strong>Actionable Alternatives:</strong> Gave students tools like the 30-Minute Focus Technique and Self-Correction Method—proving they could succeed without shortcuts.</p>
+    </section>
+
+    <footer class="footer">
+        <nav class="footer-nav">
+                <a href="Home.html">Home</a>
+                <a href="About.html">About</a>
+                <a href="Services.html">Services</a>
+                <a href="work.html">Portfolio</a>
+                <a href="Contact.html">Contact</a>
+        </nav>
+        <p>&copy; 2025 All Rights Reserved</p>
+    </footer>
+
+</body>
+</html>

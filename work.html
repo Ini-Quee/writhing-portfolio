@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Selected Work</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.7;
+            color: #2d3748;
+            background: #ffffff;
+        }
+
+        .nav {
+            background: #FFF8F0;
+            padding: 25px 60px;
+            border-bottom: 2px solid #e8d5c4;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-brand {
+            font-size: 1.4em;
+            font-weight: bold;
+            color: #8B6F47;
+        }
+
+        .nav-links {
+            display: flex;
+            justify-content: center;
+            gap: 35px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: #4a5568;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #8B6F47;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #A0826D 0%, #8B6F47 100%);
+            color: white;
+            padding: 100px 60px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3.5em;
+            margin-bottom: 30px;
+            font-weight: 600;
+        }
+
+        .hero p {
+            font-size: 1.3em;
+            opacity: 0.95;
+        }
+
+        .portfolio-section {
+            max-width: 1200px;
+            margin: 100px auto;
+            padding: 0 60px;
+        }
+
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 50px;
+            margin: 60px 0;
+        }
+
+        .project-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            transition: all 0.3s;
+            border: 2px solid #f7fafc;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+            border-color: #A0826D;
+        }
+
+        .project-header {
+            padding: 50px 40px;
+            background: linear-gradient(135deg, #A0826D 0%, #8B6F47 100%);
+            color: white;
+            text-align: center;
+        }
+
+        .project-header.udimking {
+            background: linear-gradient(135deg, #16A34A 0%, #059669 100%);
+        }
+
+        .project-header.campus {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+
+        .project-header.banana {
+            background: linear-gradient(135deg, #FBBF24 0%, #F97316 100%);
+        }
+
+        .project-icon {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+
+        .project-header h3 {
+            font-size: 1.8em;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .project-client {
+            font-size: 1.1em;
+            opacity: 0.9;
+        }
+
+        .project-body {
+            padding: 40px;
+        }
+
+        .project-tags {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+        }
+
+        .project-tag {
+            background: #f7fafc;
+            color: #8B6F47;
+            padding: 8px 18px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            font-weight: 600;
+            border: 1px solid #e8d5c4;
+        }
+
+        .project-description {
+            font-size: 1.1em;
+            color: #4a5568;
+            line-height: 1.8;
+            margin-bottom: 25px;
+        }
+
+        .project-results {
+            background: #f7fafc;
+            padding: 25px;
+            border-radius: 12px;
+            margin-bottom: 25px;
+            border-left: 4px solid #A0826D;
+        }
+
+        .result-item {
+            font-size: 1.05em;
+            color: #2d3748;
+            margin-bottom: 12px;
+            font-weight: 600;
+        }
+
+        .result-number {
+            color: #8B6F47;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+
+        .view-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #A0826D 0%, #8B6F47 100%);
+            color: white;
+            padding: 15px 35px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+            box-shadow: 0 4px 15px rgba(160, 130, 109, 0.3);
+        }
+
+        .view-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(160, 130, 109, 0.4);
+        }
+
+        .footer {
+            background: #FFF8F0;
+            color: #4a5568;
+            padding: 60px;
+            text-align: center;
+            margin-top: 100px;
+            border-top: 2px solid #e8d5c4;
+        }
+
+        .footer-nav {
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+
+        .footer-nav a {
+            color: #4a5568;
+            text-decoration: none;
+            transition: color 0.3s;
+            font-weight: 500;
+        }
+
+        .footer-nav a:hover {
+            color: #8B6F47;
+        }
+        
+        .footer p {
+            color: #718096;
+        }
+
+        @media (max-width: 768px) {
+            .nav {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .nav-links {
+                flex-wrap: wrap;
+                gap: 20px;
+            }
+
+            .hero h1 {
+                font-size: 2.5em;
+            }
+
+            .portfolio-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .portfolio-section {
+                padding: 0 30px;
+            }
+
+            .footer-nav {
+                gap: 25px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="nav">
+        <div class="nav-brand">PORTFOLIO</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="portfolio.html">Work</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="hero">
+        <h1>Selected Work</h1>
+        <p>Research-backed strategies that drive real business results</p>
+    </div>
+
+    <section class="portfolio-section" id="portfolio">
+        <div class="portfolio-grid">
+
+            <!-- Email Campaigns -->
+            <div class="project-card" id="email-campaigns">
+                <div class="project-header">
+                    <div class="project-icon">📧</div>
+                    <h3>Email Marketing Campaigns</h3>
+                    <p class="project-client">40+ Client Projects</p>
+                </div>
+                <div class="project-body">
+                    <div class="project-tags">
+                        <span class="project-tag">Email Copywriting</span>
+                        <span class="project-tag">Conversion Strategy</span>
+                        <span class="project-tag">10+ Industries</span>
+                    </div>
+                    <p class="project-description">
+                        Created conversion-focused email sequences for clients across 10+ industries. Crafted campaigns that speak directly to customer pain points, using research-backed insights to drive engagement and action.
+                    </p>
+                    <div class="project-results">
+                        <div class="result-item"><span class="result-number">40+</span> Email Sequences Written</div>
+                        <div class="result-item"><span class="result-number">25-40%</span> Open Rates Achieved</div>
+                        <div class="result-item"><span class="result-number">2x</span> Industry Average</div>
+                    </div>
+                    <a href="email-campaigns.html" class="view-button">View Details</a>
+                </div>
+            </div>
+
+            <!-- BananaCrystal Project -->
+            <div class="project-card" id="bananacrystal">
+                <div class="project-header banana">
+                    <div class="project-icon">🚀</div>
+                    <h3>Quest-to-Earn Community Growth</h3>
+                    <p class="project-client">BananaCrystal (P2P Exchange)</p>
+                </div>
+                <div class="project-body">
+                    <div class="project-tags">
+                        <span class="project-tag">Community Strategy</span>
+                        <span class="project-tag">Growth Systems</span>
+                        <span class="project-tag">Viral Marketing</span>
+                    </div>
+                    <p class="project-description">
+                        Designed a quest-to-earn Telegram growth system for a P2P currency exchange platform. Instead of traditional ads, built a viral referral engine where members earn USDT for completing social tasks. Delivered massive growth on a tiny budget.
+                    </p>
+                    <div class="project-results">
+                        <div class="result-item"><span class="result-number">1,500-2,500</span> Engaged Members</div>
+                        <div class="result-item"><span class="result-number">$800</span> Total Budget</div>
+                        <div class="result-item"><span class="result-number">98%</span> Cost Savings vs Traditional</div>
+                    </div>
+                    <a href="Coummunity growth.html" class="view-button">View Details</a>
+                </div>
+            </div>
+
+            <!-- Udimking Project -->
+            <div class="project-card" id="education-campaign">
+                <div class="project-header udimking">
+                    <div class="project-icon">📚</div>
+                    <h3>The Honest Path to Success</h3>
+                    <p class="project-client">Udimking Education Foundation</p>
+                </div>
+                <div class="project-body">
+                    <div class="project-tags">
+                        <span class="project-tag">Psychology-Driven Copy</span>
+                        <span class="project-tag">Social Impact</span>
+                        <span class="project-tag">Educational Content</span>
+                    </div>
+                    <p class="project-description">
+                        Built a psychology-driven campaign to stop examination malpractice in Nigerian schools. Addressed the root cause (fear of failure) rather than lecturing about morals. Combined cognitive science, emotional intelligence, and actionable learning strategies.
+                    </p>
+                    <div class="project-results">
+                        <div class="result-item"><span class="result-number">1,800+</span> Students Reached</div>
+                        <div class="result-item"><span class="result-number">95%</span> Satisfaction Rating</div>
+                        <div class="result-item"><span class="result-number">100%</span> Psychology-Backed</div>
+                    </div>
+                    <a href="education-campaign.html" class="view-button">View Details</a>
+                </div>
+            </div>
+
+            <!-- Campus WiFi Project -->
+            <div class="project-card" id="wifi-research">
+                <div class="project-header campus">
+                    <div class="project-icon">📡</div>
+                    <h3>Campus Wi-Fi Market Research</h3>
+                    <p class="project-client">EdTech Startup (Nigeria)</p>
+                </div>
+                <div class="project-body">
+                    <div class="project-tags">
+                        <span class="project-tag">Market Research</span>
+                        <span class="project-tag">Financial Modeling</span>
+                        <span class="project-tag">Investor Proposals</span>
+                    </div>
+                    <p class="project-description">
+                        Conducted deep market validation for a startup targeting 1.8M Nigerian university students. Analyzed student forums, cost patterns, and pain points to identify a ₦1.9 trillion annual opportunity. Built investor-ready proposals and 3-year financial projections.
+                    </p>
+                    <div class="project-results">
+                        <div class="result-item"><span class="result-number">₦1.4B</span> Year 2 Revenue Projection</div>
+                        <div class="result-item"><span class="result-number">1.8M</span> Target Market (Students)</div>
+                        <div class="result-item"><span class="result-number">₦1.9T</span> Annual Market Size</div>
+                    </div>
+                    <a href="campus.HTML" class="view-button">View Details</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer class="footer">
+        <nav class="footer-nav">
+            <a href="Home.html">Home</a>
+            <a href="About.html">About</a>
+            <a href="Services.html">Services</a>
+            <a href="work.html">Work</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+        <p>&copy; 2025 Erica Innocent Effiong. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

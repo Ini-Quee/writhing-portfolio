@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campus Wi-Fi: Market Research & Business Strategy</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Georgia', serif;
+            line-height: 1.6;
+            color: #b38a95;
+            background: linear-gradient(135deg, #A0826D 0%, #8B6F47 100%);
+            padding: 40px 20px;
+        }
+        
+        .container {
+            max-width: 2200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+        
+        .header {
+            background: linear-gradient(135deg,  #A0826D 0%, #8B6F47 100%);
+            color: white;
+            padding: 60px 40px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            font-weight: 300;
+            letter-spacing: 2px;
+        }
+        
+        .header p {
+            font-size: 1.3em;
+            opacity: 0.9;
+            font-style: italic;
+        }
+
+        .tags {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 25px;
+            flex-wrap: wrap;
+        }
+
+        .tag {
+            background: rgba(255,255,255,0.2);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-size: 0.95em;
+            font-weight: 500;
+            backdrop-filter: blur(10px);
+        }
+        
+        .intro {
+            padding: 50px 40px;
+            background: #f8f9fa;
+            border-bottom: 3px solid #667eea;
+        }
+        
+        .intro h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+            color: #1e3c72;
+        }
+        
+        .intro p {
+            font-size: 1.1em;
+            margin-bottom: 15px;
+            color: #555;
+        }
+
+        .intro strong {
+            color: #1e3c72;
+        }
+        
+        .section {
+            padding: 50px 40px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        
+        .section:last-child {
+            border-bottom: none;
+        }
+        
+        .section-header {
+            margin-bottom: 30px;
+        }
+        
+        .section-header h3 {
+            font-size: 1.8em;
+            color: #1e3c72;
+            margin-bottom: 10px;
+        }
+
+        .section-header p {
+            font-size: 1.1em;
+            color: #666;
+            font-style: italic;
+        }
+
+        .stats-bar {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 40px;
+            margin: 30px 0;
+            border-radius: 12px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            text-align: center;
+            color: white;
+        }
+
+        .stat-item {
+            padding: 20px;
+        }
+
+        .stat-number {
+            font-size: 2.5em;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .stat-label {
+            font-size: 1em;
+            opacity: 0.9;
+        }
+
+        .content-box {
+            background: #fff;
+            border: 2px solid #e0e0e0;
+            border-radius: 12px;
+            padding: 35px;
+            margin: 25px 0;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+
+        .content-box h4 {
+            font-size: 1.4em;
+            color: #1e3c72;
+            margin-bottom: 15px;
+        }
+
+        .content-box p {
+            font-size: 1.05em;
+            line-height: 1.8;
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        .content-box ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .content-box ul li {
+            padding: 10px 0;
+            padding-left: 30px;
+            position: relative;
+            font-size: 1.05em;
+            color: #333;
+        }
+
+        .content-box ul li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #48bb78;
+            font-weight: bold;
+            font-size: 1.3em;
+        }
+
+        .problem-box {
+            background: linear-gradient(135deg, #9e7558 0%, #5e431d 100%);
+            color: white;
+            padding: 35px;
+            border-radius: 12px;
+            margin: 25px 0;
+        }
+
+        .problem-box h4 {
+            font-size: 1.6em;
+            margin-bottom: 15px;
+            font-weight: 300;
+        }
+
+        .problem-box p {
+            font-size: 1.1em;
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+
+        .problem-box .big-stat {
+            font-size: 2.5em;
+            font-weight: bold;
+            margin: 20px 0;
+        }
+
+        .solution-box {
+            background: linear-gradient(135deg,  #A0826D 0%, #8B6F47 100%);
+            color: white ;
+            padding: 35px;
+            border-radius: 12px;
+            margin: 25px 0;
+        }
+
+        .solution-box h4 {
+            font-size: 1.6em;
+            margin-bottom: 15px;
+            font-weight: 300;
+        }
+
+        .solution-box p {
+            font-size: 1.1em;
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+
+        .quote-box {
+            background: #f8f9fa;
+            border-left: 4px solid #667eea;
+            padding: 25px 30px;
+            margin: 25px 0;
+            border-radius: 4px;
+            font-style: italic;
+            font-size: 1.15em;
+            color: #2c3e50;
+        }
+
+        .quote-author {
+            margin-top: 15px;
+            font-style: normal;
+            font-weight: bold;
+            color: #667eea;
+        }
+
+        .two-column {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin: 25px 0;
+        }
+
+        .table-container {
+            overflow-x: auto;
+            margin: 25px 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+
+        table thead {
+            background: #667eea;
+            color: white;
+        }
+
+        table th {
+            padding: 18px;
+            text-align: left;
+            font-weight: 600;
+            font-size: 1.05em;
+        }
+
+        table td {
+            padding: 18px;
+            border-bottom: 1px solid #e0e0e0;
+            font-size: 1em;
+            color: #333;
+        }
+
+        table tr:hover {
+            background: #f8f9fa;
+        }
+
+        .highlight {
+            color: #667eea;
+            font-weight: bold;
+        }
+
+        .highlight-green {
+            color: #48bb78;
+            font-weight: bold;
+        }
+
+        .highlight-red {
+            color: #fc8181;
+            font-weight: bold;
+        }
+
+        .deliverables-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin: 25px 0;
+        }
+
+        .deliverable-card {
+            background: #f8f9fa;
+            border-left: 4px solid #667eea;
+            padding: 25px;
+            border-radius: 8px;
+        }
+
+        .deliverable-card h5 {
+            font-size: 1.3em;
+            color: #1e3c72;
+            margin-bottom: 12px;
+        }
+
+        .deliverable-card p {
+            font-size: 1em;
+            color: #555;
+            line-height: 1.7;
+        }
+
+        .deliverable-card ul {
+            list-style: none;
+            padding: 0;
+            margin-top: 15px;
+        }
+
+        .deliverable-card ul li {
+            padding: 8px 0;
+            padding-left: 25px;
+            position: relative;
+            font-size: 0.95em;
+            color: #555;
+        }
+
+        .deliverable-card ul li:before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: #667eea;
+            font-weight: bold;
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2em;
+            }
+
+            .two-column {
+                grid-template-columns: 1fr;
+            }
+
+            .section {
+                padding: 30px 20px;
+            }
+
+            .content-box {
+                padding: 20px;
+            }
+
+            .stats-bar {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Campus Wi-Fi</h1>
+            <p>Market Research & Business Strategy for Nigerian EdTech Startup</p>
+            <div class="tags">
+                <span class="tag">Market Research</span>
+                <span class="tag">Business Strategy</span>
+                <span class="tag">Financial Modeling</span>
+                <span class="tag">Investor Proposals</span>
+            </div>
+        </div>
+
+        <div class="intro">
+            <h2>Project Overview</h2>
+            <p>A comprehensive market research and business strategy project for a startup aiming to provide affordable Wi-Fi subscriptions to Nigerian university students—disrupting a ₦1.9 trillion annual market currently dominated by expensive, unreliable mobile data.</p>
+            <p><strong>My Role:</strong> Lead Market Researcher & Business Strategist</p>
+            <p><strong>Scope:</strong> Deep student pain-point research, cost analysis, financial modeling, investor proposal development, and strategic vision creation</p>
+            <p><strong>Timeline:</strong> 3 weeks of intensive research, analysis, and deliverable creation</p>
+        </div>
+
+        <!-- Client Challenge -->
+        <div class="section">
+            <div class="section-header">
+                <h3>The Client Challenge</h3>
+                <p>Validating a market opportunity in Nigeria's underserved student internet market</p>
+            </div>
+
+            <div class="content-box">
+                <h4>What the Client Needed</h4>
+                <p>A startup had identified a potential opportunity: Nigerian university students were spending massive amounts on unreliable mobile data. But they needed answers to critical questions before launching:</p>
+                <ul>
+                    <li><strong>Is the pain real?</strong> Are students actually frustrated enough to switch from mobile data to campus Wi-Fi?</li>
+                    <li><strong>Will students pay?</strong> Even if the service is cheaper, will they trust it and subscribe?</li>
+                    <li><strong>What's the financial model?</strong> Can this work at scale? What's the path to profitability?</li>
+                    <li><strong>How do we pitch investors?</strong> What story, data, and projections will secure funding?</li>
+                </ul>
+                <p style="margin-top: 20px;">They needed more than surface-level research. They needed <strong>deep market validation</strong>, <strong>defensible financial projections</strong>, and <strong>investor-ready materials</strong> that could withstand scrutiny.</p>
+            </div>
+
+            <div class="two-column">
+                <div class="content-box">
+                    <h4>The Stakes</h4>
+                    <p><strong>High Risk:</strong> Building physical infrastructure (Starlink, solar power, routers) across multiple universities requires ₦20-35M per campus upfront.</p>
+                    <p><strong>High Reward:</strong> If successful, this becomes a scalable recurring-revenue business with 1.8M potential customers and minimal churn (students need internet).</p>
+                </div>
+                <div class="content-box">
+                    <h4>Why This Matters</h4>
+                    <p>This isn't just a business opportunity—it's about <strong>educational equity</strong>. Students from low-income backgrounds can't afford ₦12,000-₦20,000/month for data. Campus Wi-Fi at ₦3,000-₦5,500/month levels the playing field.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- The Problem (Student Crisis) -->
+        <div class="section" style="background: #f8f9fa;">
+            <div class="section-header">
+                <h3>Phase 1: Deep Student Pain-Point Research</h3>
+                <p>Understanding the emotional and financial reality of Nigerian university students</p>
+            </div>
+
+            <div class="problem-box">
+                <h4>The Student Data Crisis</h4>
+                <p>Nigerian university students collectively spend:</p>
+                <div class="big-stat">₦159 Billion Monthly</div>
+                <p>on unreliable mobile data—₦1.9 trillion annually. After a 50% tariff hike in January 2025, students now spend ₦8,000-₦25,000/month on internet access, often more than they spend on food.</p>
+            </div>
+
+            <div class="content-box">
+                <h4>Research Methodology</h4>
+                <p>I didn't rely on assumptions. I went directly to the source: <strong>real student voices</strong> from Nigerian forums, social media, and university groups.</p>
+                <p><strong>Sources analyzed:</strong></p>
+                <ul>
+                    <li>Nigerian student Facebook groups</li>
+                    <li>University-specific forums and WhatsApp discussions</li>
+                    <li>Twitter/X complaints about data costs</li>
+                    <li>Reddit threads on Nigerian internet providers</li>
+                    <li>Instagram comments on student life accounts</li>
+                </ul>
+            </div>
+
+            <div class="quote-box">
+                "I spend between ₦8,000 to ₦10,000 on data monthly. That is more than what I spend on feeding."
+                <div class="quote-author">— Lagos State University Student (Real Quote from Research)</div>
+            </div>
+
+            <div class="quote-box">
+                "Data is life, but the depletion rate is alarming. I had to keep video off during Zoom lectures to save data."
+                <div class="quote-author">— University of Nigeria Student</div>
+            </div>
+
+            <div class="content-box">
+                <h4>Key Pain Points Discovered</h4>
+                <div class="two-column">
+                    <div>
+                        <p><strong class="highlight-red">💸 Financial Crisis:</strong></p>
+                        <ul>
+                            <li>"Choosing between data and food every week"</li>
+                            <li>"Borrowing data almost every week"</li>
+                            <li>"Can't afford research for final year projects"</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <p><strong class="highlight-red">📚 Academic Impact:</strong></p>
+                        <ul>
+                            <li>"Missed deadlines due to network failure"</li>
+                            <li>"Can't download lecture materials on time"</li>
+                            <li>"Lost connection during online submissions"</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="two-column" style="margin-top: 20px;">
+                    <div>
+                        <p><strong class="highlight-red">📡 Infrastructure Failure:</strong></p>
+                        <ul>
+                            <li>"Poor network coverage in hostels"</li>
+                            <li>"Network doesn't connect even with balance"</li>
+                            <li>"Can't stream educational videos without buffering"</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <p><strong class="highlight-red">😰 Emotional Stress:</strong></p>
+                        <ul>
+                            <li>"Constant fear of data running out during exams"</li>
+                            <li>"This is outrageous and discouraging"</li>
+                            <li>"Embarrassment of asking friends for data loans"</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="stats-bar">
+                <div class="stat-item">
+                    <div class="stat-number">83%</div>
+                    <div class="stat-label">Data Consumption Surge<br/>(2023-2025)</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">50%</div>
+                    <div class="stat-label">Tariff Increase<br/>(January 2025)</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">1.8M</div>
+                    <div class="stat-label">Nigerian University<br/>Students</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">274</div>
+                    <div class="stat-label">Universities<br/>Nationwide</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Cost Analysis -->
+        <div class="section">
+            <div class="section-header">
+                <h3>Phase 2: The Hidden Cost of Buying Data Weekly</h3>
+                <p>Detailed financial analysis of student spending patterns</p>
+            </div>
+
+            <div class="content-box">
+                <h4>The Problem: Students Pay 2-3x More by Buying Small Bundles</h4>
+                <p>Most students can't afford large monthly data bundles upfront (₦5,000-₦10,000). So they buy small, frequent top-ups—not realizing they're paying a massive premium.</p>
+                <p>I tracked 4 common student buying patterns and calculated their actual monthly costs:</p>
+            </div>
+
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Student Type</th>
+                            <th>Weekly Purchase</th>
+                            <th>Monthly Mobile Data Cost</th>
+                            <th>Campus Wi-Fi Cost</th>
+                            <th>Annual Savings</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Light User</strong></td>
+                            <td>₦500-₦800</td>
+                            <td class="highlight-red">₦2,000-₦3,200</td>
+                            <td class="highlight-green">₦3,000</td>
+                            <td class="highlight">₦2,400</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Moderate User</strong></td>
+                            <td>₦1,000-₦1,500</td>
+                            <td class="highlight-red">₦4,000-₦6,000</td>
+                            <td class="highlight-green">₦4,000</td>
+                            <td class="highlight">₦24,000</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Heavy User</strong></td>
+                            <td>₦2,000-₦3,000</td>
+                            <td class="highlight-red">₦8,000-₦12,000</td>
+                            <td class="highlight-green">₦4,000</td>
+                            <td class="highlight">₦96,000</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Power User</strong></td>
+                            <td>₦3,500-₦5,000</td>
+                            <td class="highlight-red">₦14,000-₦20,000</td>
+                            <td class="highlight-green">₦5,500</td>
+                            <td class="highlight">₦150,000</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="solution-box">
+                <h4>What ₦96,000 Annual Savings Means for a Heavy User:</h4>
+                <p>✓ <strong>One semester's tuition</strong> at a state university<br/>
+                ✓ <strong>Six months of feeding</strong> (₦16,000/month)<br/>
+                ✓ <strong>Full JAMB + Post-UTME registration</strong> for a sibling<br/>
+                ✓ <strong>Emergency medical fund</strong> or textbooks for an entire year</p>
+            </div>
+
+            <div class="content-box">
+                <h4>Why Students Keep Buying Expensive Small Bundles</h4>
+                <p><strong>1. Cash Flow Limitation:</strong> Can't afford ₦5,000-₦10,000 upfront for monthly bundles</p>
+                <p><strong>2. Distrust:</strong> "Data depletes too fast—why buy big bundles that will finish in days?"</p>
+                <p><strong>3. Fear of Waste:</strong> "What if I don't use all the data?"</p>
+                <p><strong>4. Emergency Mentality:</strong> "I just need to survive until next week"</p>
+                <p style="margin-top: 20px;"><strong>Result:</strong> Students pay 2-3x more over the course of a month without realizing it.</p>
+            </div>
+        </div>
+
+        <!-- Market Opportunity -->
+        <div class="section" style="background: #f8f9fa;">
+            <div class="section-header">
+                <h3>Phase 3: Market Opportunity & Financial Modeling</h3>
+                <p>Building defensible revenue projections and unit economics</p>
+            </div>
+
+            <div class="content-box">
+                <h4>Target Market: Nigerian Universities</h4>
+                <p><strong>Total Market:</strong> 274 universities (62 federal, 63 state, 149 private) serving 1.8 million students</p>
+                <p><strong>Initial Pilot Target:</strong></p>
+                <ul>
+                    <li><strong>University of Uyo:</strong> 17,500 students</li>
+                    <li><strong>University of Calabar:</strong> 42,000 students</li>
+                </ul>
+            </div>
+
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>University</th>
+                            <th>Students</th>
+                            <th>50% Penetration</th>
+                            <th>Monthly Revenue</th>
+                            <th>Annual Revenue</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>University of Uyo</td>
+                            <td>17,500</td>
+                            <td>8,750 subscribers</td>
+                            <td class="highlight-green">₦35,000,000</td>
+                            <td class="highlight">₦420,000,000</td>
+                        </tr>
+                        <tr>
+                            <td>University of Calabar</td>
+                            <td>42,000</td>
+                            <td>21,000 subscribers</td>
+                            <td class="highlight-green">₦84,000,000</td>
+                            <td class="highlight">₦1,008,000,000</td>
+                        </tr>
+                        <tr style="background: #f0fff4;">
+                            <td colspan="3"><strong>COMBINED (Year 2)</strong></td>
+                            <td class="highlight-green"><strong>₦119,000,000</strong></td>
+                            <td class="highlight"><strong>₦1,428,000,000</strong></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="stats-bar">
+                <div class="stat-item">
+                    <div class="stat-number">12-18</div>
+                    <div class="stat-label">Months to Payback<br/>(Per Campus)</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">120-180%</div>
+                    <div class="stat-label">IRR Over<br/>3 Years</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">85-90%</div>
+                    <div class="stat-label">Gross Margin<br/>(Year 2+)</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">5-8%</div>
+                    <div class="stat-label">Expected Churn<br/>(Low)</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Deliverables -->
+        <div class="section">
+            <div class="section-header">
+                <h3>Phase 4: Deliverables & Strategic Materials</h3>
+                <p>Creating comprehensive, investor-ready documentation</p>
+            </div>
+
+            <div class="deliverables-grid">
+                <div class="deliverable-card">
+                    <h5>📊 Investor-Ready Business Proposal</h5>
+                    <p>30+ page comprehensive proposal including:</p>
+                    <ul>
+                        <li>Market opportunity analysis</li>
+                        <li>Student pain point research (real quotes from forums)</li>
+                        <li>Cost vs. value comparison tables</li>
+                        <li>Business model & revenue projections</li>
+                        <li>Competitive analysis</li>
+                        <li>ROI & exit strategy</li>
+                    </ul>
+                </div>
+
+                <div class="deliverable-card">
+                    <h5>🎯 Strategic Vision Board</h5>
+                    <p>2-3 page visual strategy document featuring:</p>
+                    <ul>
+                        <li>Mission & problem statement</li>
+                        <li>3-year growth roadmap</li>
+                        <li>Financial milestones & targets</li>
+                        <li>Expansion strategy</li>
+                        <li>Social impact metrics</li>
+                        <li>Exit scenarios</li>
+                    </ul>
+                </div>
+
+                <div class="deliverable-card">
+                    <h5>📱 Student Adoption Analysis</h5>
+                    <p>Deep-dive into student psychology including:</p>
+                    <ul>
+                        <li>Why students need this (emotional + financial)</li>
+                        <li>Detailed cost breakdowns (weekly buyers vs. monthly WiFi)</li>
+                        <li>Objection handling strategies</li>
+                        <li>Trust-building mechanisms</li>
+                        <li>Peer adoption tactics</li>
+                    </ul>
+                </div>
+
+                <div class="deliverable-card">
+                    <h5>💼 Financial Models & Unit Economics</h5>
+                    <p>Defensible projections including:</p>
+                    <ul>
+                        <li>CAPEX breakdown per campus</li>
+                        <li>Monthly OPEX calculations</li>
+                        <li>3-year revenue scenarios (conservative to aggressive)</li>
+                        <li>Break-even analysis</li>
+                        <li>Penetration rate modeling</li>
+                    </ul>
+                </div>
+
+                <div class="deliverable-card">
+                    <h5>🎨 Visual Pitch Deck</h5>
+                    <p>Professional presentation materials with:</p>
+                    <ul>
+                        <li>Compelling data visualization</li>
+                        <li>Student testimonial slides</li>
+                        <li>Market sizing graphics</li>
+                        <li>Financial projection charts</li>
+                        <li>Competitive positioning</li>
+                    </ul>
+                </div>
+
+                <div class="deliverable-card">
+                    <h5>📝 Market Research Report</h5>
+                    <p>Comprehensive analysis document:</p>
+                    <ul>
+                        <li>Student forum analysis summary</li>
+                        <li>Telecom pricing research</li>
+                        <li>University enrollment data</li>
+                        <li>Competitive landscape mapping</li>
+                        <li>Regulatory considerations</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Skills Demonstrated -->
+        <div class="section" style="background: #f8f9fa;">
+            <div class="section-header">
+                <h3>Skills & Competencies Demonstrated</h3>
+                <p>Core capabilities applied throughout this project</p>
+            </div>
+
+            <div class="content-box">
+                <h4>Research & Analysis</h4>
+                <div class="two-column">
+                    <ul>
+                        <li>Deep qualitative research (forum analysis, social listening)</li>
+                        <li>Market sizing & TAM calculations</li>
+                        <li>Competitive analysis & positioning</li>
+                        <li>Customer pain point identification</li>
+                    </ul>
+                    <ul>
+                        <li>Financial modeling & unit economics</li>
+                        <li>Revenue projection scenarios</li>
+                        <li>Risk assessment & mitigation planning</li>
+                        <li>Data </li>
+            </div>
+<!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <nav class="footer-nav">
+                <a href="Home.html">Home</a>
+                <a href="About.html">About</a>
+                <a href="Services.html">Services</a>
+                <a href="work.html">Portfolio</a>
+                <a href="Contact.html">Contact</a>
+            </nav>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Erica Innocent Effiong. All rights reserved.</p>
+            </div>
+       
+    </footer>

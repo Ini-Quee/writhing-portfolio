@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Erica Innocent Effiong - Copywriter & Content Strategist</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #2d3748;
+            background: #fff;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            border-bottom: 1px solid #e8d5c4;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.3em;
+            font-weight: 700;
+            color: #8B6F47;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 35px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: #4a5568;
+            text-decoration: none;
+            font-size: 1em;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #8B6F47;
+        }
+
+        /* Hero Section */
+        .hero {
+            margin-top: 80px;
+            padding: 100px 40px 80px;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3.5em;
+            font-weight: 700;
+            color: #2d3748;
+            margin-bottom: 30px;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 1.4em;
+            color: #4a5568;
+            margin-bottom: 40px;
+            line-height: 1.6;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 16px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1em;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #A0826D 0%, #8B6F47 100%);
+            color: white;
+            box-shadow: 0 4px 15px rgba(160, 130, 109, 0.3);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(160, 130, 109, 0.4);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: #8B6F47;
+            border: 2px solid #8B6F47;
+        }
+
+        .btn-secondary:hover {
+            background: #8B6F47;
+            color: white;
+        }
+
+        /* Trusted By Section */
+        .trusted-section {
+            padding: 60px 40px;
+            background: #f7fafc;
+            text-align: center;
+        }
+
+        .trusted-section h3 {
+            font-size: 0.95em;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #718096;
+            margin-bottom: 40px;
+            font-weight: 600;
+        }
+
+        .clients-grid {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 60px;
+            flex-wrap: wrap;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .client-logo {
+            font-size: 1.3em;
+            color: #a0aec0;
+            font-weight: 600;
+            opacity: 0.7;
+            transition: opacity 0.3s;
+        }
+
+        .client-logo:hover {
+            opacity: 1;
+        }
+
+        /* What I Do Section */
+        .services-section {
+            padding: 100px 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 70px;
+        }
+
+        .section-header h2 {
+            font-size: 2.8em;
+            color: #2d3748;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .section-header p {
+            font-size: 1.2em;
+            color: #4a5568;
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.7;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 40px;
+        }
+
+        .service-card {
+            background: white;
+            padding: 45px;
+            border-radius: 15px;
+            border: 2px solid #f7fafc;
+            transition: all 0.3s ease;
+        }
+
+        .service-card:hover {
+            border-color: #e8d5c4;
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+        }
+
+        .service-icon {
+            font-size: 2.5em;
+            margin-bottom: 25px;
+        }
+
+        .service-card h3 {
+            font-size: 1.6em;
+            color: #2d3748;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        .service-card p {
+            font-size: 1.05em;
+            color: #4a5568;
+            line-height: 1.7;
+        }
+
+        /* Work Section */
+        .work-section {
+            padding: 100px 40px;
+            background: #f7fafc;
+        }
+
+        .work-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .work-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+            margin-top: 60px;
+        }
+
+        .work-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+            cursor: pointer;
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+
+        .work-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+        }
+
+        .work-image {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            background: linear-gradient(135deg, #e8d5c4 0%, #d4a574 100%);
+        }
+        
+        .work-image-placeholder {
+            width: 100%;
+            height: 250px;
+            background: linear-gradient(135deg, #e8d5c4 0%, #d4a574 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4em;
+        }
+
+        .work-content {
+            padding: 35px;
+        }
+
+        .work-category {
+            font-size: 0.85em;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #8B6F47;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        .work-content h3 {
+            font-size: 1.6em;
+            color: #2d3748;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .work-content p {
+            font-size: 1.05em;
+            color: #4a5568;
+            line-height: 1.7;
+            margin-bottom: 25px;
+        }
+
+        .work-stats {
+            display: flex;
+            gap: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #e8d5c4;
+        }
+
+        .stat {
+            flex: 1;
+        }
+
+        .stat-number {
+            font-size: 1.8em;
+            font-weight: 700;
+            color: #8B6F47;
+            margin-bottom: 5px;
+        }
+
+        .stat-label {
+            font-size: 0.9em;
+            color: #718096;
+        }
+
+        /* Testimonial Section */
+        .testimonial-section {
+            padding: 100px 40px;
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .testimonial-card {
+            background: white;
+            padding: 60px;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+            border-left: 5px solid #A0826D;
+        }
+
+        .testimonial-text {
+            font-size: 1.5em;
+            line-height: 1.7;
+            color: #2d3748;
+            font-style: italic;
+            margin-bottom: 30px;
+        }
+
+        .testimonial-author {
+            font-size: 1.1em;
+            color: #8B6F47;
+            font-weight: 600;
+        }
+
+        .testimonial-role {
+            font-size: 1em;
+            color: #718096;
+            margin-top: 5px;
+        }
+
+        /* CTA Section */
+        .final-cta {
+            padding: 100px 40px;
+            background: linear-gradient(135deg, #A0826D 0%, #8B6F47 100%);
+            text-align: center;
+            color: white;
+        }
+
+        .final-cta h2 {
+            font-size: 3em;
+            margin-bottom: 25px;
+            font-weight: 700;
+        }
+
+        .final-cta p {
+            font-size: 1.3em;
+            margin-bottom: 50px;
+            opacity: 0.95;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Footer */
+        footer {
+            background: #2d3748;
+            color: #cbd5e0;
+            padding: 60px 40px 40px;
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 50px;
+            margin-bottom: 50px;
+        }
+
+        .footer-section h4 {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+            color: white;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+
+        .footer-links a {
+            color: #cbd5e0;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: #A0826D;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 40px;
+            border-top: 1px solid rgba(203, 213, 224, 0.2);
+            font-size: 0.95em;
+        }
+
+        /* Mobile Menu */
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5em;
+            color: #8B6F47;
+            cursor: pointer;
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .hero {
+                padding: 60px 30px 50px;
+            }
+
+            .hero h1 {
+                font-size: 2.2em;
+            }
+
+            .hero p {
+                font-size: 1.15em;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .btn {
+                width: 100%;
+                max-width: 300px;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .work-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .final-cta h2 {
+                font-size: 2em;
+            }
+
+            .testimonial-card {
+                padding: 40px 30px;
+            }
+
+            .testimonial-text {
+                font-size: 1.2em;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <a href="#" class="logo">Erica Innocent</a>
+            <ul class="nav-links">
+                <li><a href="#work">Work</a></li>
+                <li><a href="About.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="Contact.html">Contact</a></li>
+            </ul>
+            <button class="mobile-menu-btn">☰</button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Copy That Connects. Research That Converts.</h1>
+            <p>I help businesses turn confused visitors into confident customers through clear, research-backed copywriting.</p>
+            <div class="cta-buttons">
+                <a href="Contact.html" class="btn btn-primary">Start a Project</a>
+                <a href="#work" class="btn btn-secondary">See My Work</a>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- What I Do -->
+    <section class="services-section">
+        <div class="section-header">
+            <h2>What I Do For You</h2>
+            <p>I don't just write words. I research your customers, understand their problems, and create copy that speaks directly to what they need.</p>
+        </div>
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon">🔍</div>
+                <h3>Deep Research</h3>
+                <p>I dig into forums, reviews, and social media to find the exact words your customers use when they're looking for solutions. This isn't guesswork. It's real insight.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">✍️</div>
+                <h3>Conversion Copy</h3>
+                <p>Email sequences, landing pages, and sales copy that move people from curious to committed. Every word is designed to build trust and drive action.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">📊</div>
+                <h3>Strategic Planning</h3>
+                <p>I help you validate your market, position your offering, and build messaging that resonates. Copy without strategy is just noise.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Work -->
+    <section class="work-section" id="work">
+        <div class="work-container">
+            <div class="section-header">
+                <h2>Recent Projects</h2>
+                <p>Real work. Real results. Here's how I've helped businesses grow.</p>
+            </div>
+            <div class="work-grid">
+                <a href="email-campaigns.html" class="work-card">
+                    <img src="https://images.unsplash.com/photo-1596526131083-e8c633c948d2?w=800&h=500&fit=crop" alt="Email Marketing Campaign" class="work-image">
+                    <div class="work-content">
+                        <div class="work-category">Email Marketing</div>
+                        <h3>40+ Email Sequences</h3>
+                        <p>Created conversion-focused email campaigns for clients across 10+ industries, achieving open rates of 25-40% compared to the 15-20% industry average.</p>
+                        <div class="work-stats">
+                            <div class="stat">
+                                <div class="stat-number">40+</div>
+                                <div class="stat-label">Sequences</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-number">35%</div>
+                                <div class="stat-label">Avg Open Rate</div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="Coummunity growth.html" class="work-card">
+                    <img src="https://images.unsplash.com/photo-1639762681485-074b7f938ba0?w=800&h=500&fit=crop" alt="BananaCrystal Community Growth" class="work-image">
+                    <div class="work-content">
+                        <div class="work-category">Community Growth</div>
+                        <h3>BananaCrystal Viral Campaign</h3>
+                        <p>Designed a quest-to-earn Telegram system for P2P currency exchange. Built viral referral engine where members earn USDT for social tasks. Delivered 1,500-2,500 engaged members for just $800.</p>
+                        <div class="work-stats">
+                            <div class="stat">
+                                <div class="stat-number">2,500</div>
+                                <div class="stat-label">Members</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-number">$800</div>
+                                <div class="stat-label">Budget</div>
+                            </div>
+                        </div>]
+                    </div>
+                </a>
+
+                <a href="portfolio.html#education-campaign" class="work-card">
+                    <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=800&h=500&fit=crop" alt="Education Campaign" class="work-image">
+                    <div class="work-content">
+                        <div class="work-category">Social Impact</div>
+                        <h3>Education Campaign</h3>
+                        <p>Built a psychology-driven campaign for Udimking Foundation to reduce exam cheating. Used cognitive science and fear management to help students choose integrity.</p>
+                        <div class="work-stats">
+                            <div class="stat">
+                                <div class="stat-number">1,800+</div>
+                                <div class="stat-label">Students Reached</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-number">95%</div>
+                                <div class="stat-label">Satisfaction</div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="campus.HTML" class="work-card">
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=500&fit=crop" alt="Market Research" class="work-image">
+                    <div class="work-content">
+                        <div class="work-category">Market Research</div>
+                        <h3>Campus Wi-Fi Validation</h3>
+                        <p>Conducted market research for a startup targeting 1.8M Nigerian university students. Built investor-ready proposals and financial models projecting ₦1.4B Year 2 revenue.</p>
+                        <div class="work-stats">
+                            <div class="stat">
+                                <div class="stat-number">₦1.9T</div>
+                                <div class="stat-label">Market Size</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-number">₦1.4B</div>
+                                <div class="stat-label">Y2 Projection</div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonial -->
+    <section class="testimonial-section">
+        <div class="testimonial-card">
+            <p class="testimonial-text">"Erica doesn't just write copy. She digs deep into understanding our audience and comes back with insights that change how we communicate. Her work directly contributed to increasing our community engagement by 35%."</p>
+            <div class="testimonial-author">Michael Chen</div>
+            <div class="testimonial-role">Community Lead, Venom Foundation</div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="final-cta">
+        <h2>Ready to Grow Your Business?</h2>
+        <p>Let's have a real conversation about your goals, your challenges, and how clear, strategic copy can help you get where you want to go.</p>
+        <a href="Contact.html" class="btn btn-primary" style="background: white; color: #8B6F47;">Get In Touch</a>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Erica Innocent</h4>
+                    <p style="color: #cbd5e0; line-height: 1.7; margin-top: 10px;">Copywriter and content strategist helping businesses communicate clearly and grow confidently.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="Home.html">Home</a></li>
+                        <li><a href="About.html">About</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="Contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Connect</h4>
+                    <ul class="footer-links">
+                        <li><a href="mailto:ericainiking.2000@gmail.com">Email Me</a></li>
+                        <li><a href="https://linkedin.com/in/erica-innocent-542147265">LinkedIn</a></li>
+                        <li><a href="https://wa.me/2348028792878">WhatsApp</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Erica Innocent Effiong. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

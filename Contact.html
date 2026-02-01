@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Let's Work Together</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Georgia', serif;
+            line-height: 1.8;
+            color: #2c3e50;
+            background: #ffffff;
+        }
+
+        /* Hero */
+        .hero {
+            background: linear-gradient(135deg, #8B6F47 0%, #6B5344 100%);
+            color: #FFF8F0;
+            padding: 100px 60px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3.5em;
+            line-height: 1.2;
+            margin-bottom: 30px;
+            font-weight: 300;
+        }
+
+        .hero p {
+            font-size: 1.4em;
+            margin-bottom: 20px;
+            opacity: 0.95;
+        }
+
+        /* Main Content */
+        .content-section {
+            max-width: 800px;
+            margin: 100px auto;
+            padding: 0 60px;
+        }
+
+        .content-section h2 {
+            font-size: 2.5em;
+            color: #2C1810;
+            margin-bottom: 30px;
+            font-weight: 300;
+        }
+
+        .content-section p {
+            font-size: 1.2em;
+            color: #555;
+            margin-bottom: 25px;
+            line-height: 1.8;
+        }
+
+        /* Contact Methods */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 40px;
+            margin: 60px 0;
+        }
+
+        .contact-card {
+            background: #FFF8F0;
+            padding: 40px;
+            border-radius: 8px;
+            border-left: 5px solid #8B6F47;
+            transition: all 0.3s;
+        }
+
+        .contact-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(139, 111, 71, 0.15);
+        }
+
+        .contact-card h3 {
+            font-size: 1.5em;
+            color: #8B6F47;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .contact-card p {
+            font-size: 1.1em;
+            color: #555;
+            margin-bottom: 15px;
+        }
+
+        .contact-card a {
+            color: #8B6F47;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1em;
+        }
+
+        .contact-card a:hover {
+            text-decoration: underline;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            max-width: 900px;
+            margin: 100px auto;
+            padding: 80px 60px;
+            background: linear-gradient(135deg, #8B6F47 0%, #6B5344 100%);
+            border-radius: 8px;
+            text-align: center;
+            color: #FFF8F0;
+        }
+
+        .cta-section h2 {
+            font-size: 2.8em;
+            margin-bottom: 25px;
+            font-weight: 300;
+        }
+
+        .cta-section p {
+            font-size: 1.3em;
+            margin-bottom: 50px;
+            opacity: 0.95;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: white;
+            color: #8B6F47;
+            padding: 20px 50px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.2em;
+            transition: all 0.3s;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 30px rgba(0,0,0,0.3);
+        }
+
+        /* Footer Navigation */
+        .footer {
+            background: #2C1810;
+            color: #E8D5C4;
+            padding: 60px 60px 40px;
+            margin-top: 100px;
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-nav {
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+        }
+
+        .footer-nav a {
+            color: #E8D5C4;
+            text-decoration: none;
+            font-size: 1.1em;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .footer-nav a:hover {
+            color: #D4A574;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(232, 213, 196, 0.3);
+            font-size: 0.95em;
+            opacity: 0.8;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5em;
+            }
+
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .content-section {
+                padding: 0 30px;
+            }
+
+            .cta-section {
+                padding: 60px 40px;
+            }
+
+            .footer-nav {
+                flex-direction: column;
+                gap: 20px;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Hero -->
+    <section class="hero">
+        <h1>Let's Build Something That Works</h1>
+        <p>If you're serious about turning your content into conversions, let's talk.</p>
+        <p style="font-size: 1.1em; margin-top: 30px;">I take on 3-5 new projects each month to ensure every client gets deep research and strategic attention.</p>
+    </section>
+
+    <!-- Main Content -->
+    <section class="content-section">
+        <h2>Before You Reach Out</h2>
+        <p>I'm selective about who I work with—not because I'm exclusive, but because quality work requires deep research, and deep research takes time.</p>
+        <p><strong>I work best with:</strong></p>
+        <p>Coaches and consultants who have audiences but no sales. You're getting engagement, but not bookings. You need conversion strategy, not more content.</p>
+        <p>Startups seeking market validation. You have an idea but need research, investor materials, and financial projections that can withstand scrutiny.</p>
+        <p>Businesses stuck at revenue plateaus. $4K, $10K, $50K/month—you're working hard but growth has stalled. You need systems, positioning, and leverage.</p>
+        <p style="margin-top: 40px; font-size: 1.3em; color: #8B6F47; font-weight: 600;">If this sounds like you, let's talk.</p>
+    </section>
+
+    <!-- Contact Methods -->
+    <section class="content-section">
+        <h2>How to Reach Me</h2>
+        <div class="contact-grid">
+            <div class="contact-card">
+                <h3>📧 Email</h3>
+                <p>Best for: Project inquiries, detailed questions</p>
+                <a href="mailto:your.erica.iniking.2000@gmail.com"> erica.iniking.2000@gmail.com</a>
+                <p style="margin-top: 15px; font-size: 0.95em; color: #777;">I respond within 24 hours (Monday-Friday)</p>
+            </div>
+
+            <div class="contact-card">
+                <h3>📞 WhatsApp</h3>
+                <p>Best for: Urgent projects, quick questions</p>
+                <a href="https://wa.me/1234567890">+234 XXX XXX XXXX</a>
+                <p style="margin-top: 15px; font-size: 0.95em; color: #777;">Available 9AM-6PM WAT</p>
+            </div>
+
+            <div class="contact-card">
+                <h3>💼 LinkedIn</h3>
+                <p>Best for: Professional networking, portfolio review</p>
+                <a href="https://www.linkedin.com/in/erica-innocent-542147265/" target="_blank">Connect with me</a>
+            </div>
+
+            <div class="contact-card">
+                <h3>📍 Location</h3>
+                <p>Based in Uyo, Akwa Ibom State, Nigeria</p>
+                <p style="margin-top: 15px; font-size: 0.95em; color: #777;">Available for remote projects worldwide</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- What Happens Next -->
+    <section class="content-section">
+        <h2>What Happens After You Reach Out</h2>
+        <p><strong>Step 1:</strong> I review your inquiry within 24 hours. If we're a potential fit, I'll respond with a few clarifying questions.</p>
+        <p><strong>Step 2:</strong> We schedule a 20-30 minute discovery call (free, no obligation). We'll discuss your goals, challenges, and whether my services align with your needs.</p>
+        <p><strong>Step 3:</strong> If we decide to work together, I'll send a proposal outlining scope, timeline, and investment. You review, we refine if needed, and then we kick off.</p>
+        <p style="margin-top: 40px; font-style: italic; color: #777;">The discovery call is always free. I want to make sure we're the right fit before you invest a single naira.</p>
+    </section>
+
+    <!-- Big CTA -->
+    <section class="cta-section">
+        <h2>Ready to Start?</h2>
+        <p>Send me a message. Tell me about your business, your goals, and what you're struggling with. I'll respond within 24 hours.</p>
+        <a href="mailto:your.email@example.com" class="cta-button">Send Me an Email</a>
+        <p style="margin-top: 40px; font-size: 1.1em;">Or WhatsApp me directly: <strong>+234 XXX XXX XXXX</strong></p>
+    </section>
+
+    <!-- Footer with Links -->
+    <footer class="footer">
+        <div class="footer-container">
+            <nav class="footer-nav">
+                 <a href="Home.html">Home</a>
+                <a href="About.html">About</a>
+                <a href="Services.html">Services</a>
+                <a href="work.html">Portfolio</a>
+                <a href="Contact.html">Contact</a>>
+            </nav>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Strategic Copywriting & Business Research. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
